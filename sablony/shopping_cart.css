@@ -1,0 +1,85 @@
+.shopping-cart-step-1 {
+    padding-top: 40px;
+}
+
+/* kosik*/
+.shopping-cart {
+    padding-bottom: 40px;
+    font-weight: 600;
+}
+
+.shopping-cart img {
+    width: 80%;
+    height: 100%;
+}
+
+.shopping-cart header{
+    text-align: center;
+}
+
+.shopping-cart .row {
+    margin-bottom: 15px;
+}
+
+.shopping-cart .row.product {
+    border: 1.5px solid #373a48;
+}
+
+
+.shopping-cart .row.product > div{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.shopping-cart .row.product > div > div{
+    align-self: center;
+}
+
+.row.total .label {
+    font-size: 24px;
+}
+
+.row.total .price-total {
+    font-size: 27px;
+}
+
+.row.product .quantity {
+    font-size: 23px;
+}
+
+.shopping-cart-step-1 h1 {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+
+@media (max-width: 767.98px) {
+    .shopping-cart-step-1 h1 {
+        text-align: center;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .row.product {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
+/*icon plus*/
+
+.row.product .quantity .fa-plus-circle{
+    padding-left: 7px;
+}
+
+.row.product .quantity .fa-minus-circle{
+    padding-right: 7px;
+}
+
+/*icon close*/
+
+.shopping-cart .close {
+    font-size: 35px;
+}
+

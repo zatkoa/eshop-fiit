@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="index.css" rel="stylesheet">
+    <link href="menu.css" rel="stylesheet">
+    <link href="product-list.css" rel="stylesheet">
+    <link href="footer.css" rel="stylesheet">
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- Materialize icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script>
+        $(document).ready(function() {
+            $('i.menu').click(function() { //zmenit na pridanie classy
+                $('nav.up').css('width', '80%');
+                $('div.overlay').css('visibility', 'visible');
+                $('div.overlay').css('opacity', '1');
+            });
+
+            $('div.overlay').click(function(){ //zmenit na odstranenie clasy?
+                $('nav.up').css('width', '0px');
+                $(this).css('visibility', 'hidden');
+                $(this).css('opacity', '0');
+            });
+
+        });
+
+    </script>
+</head>
+<body>
+    <header class="up">
+        <i class="large material-icons menu">menu</i>
+        <img src="logo_pattern.svg" alt="logo znacky saumy">
+        <div class="menu-title">
+            <span class="first">mydlá.</span>
+            <span class="second">saUmy.sk</span>
+            <span class="third ">krémy.</span>
+        </div>
+        <div class="icons">
+            <i class="large material-icons search">search</i>
+            <i class="large material-icons person">person</i>
+            <i class="large material-icons shop">shopping_cart</i>
+            <div>
+                <span>(1)</span>
+            </div>
+        </div>
+    </header>
+    <!--d-none d-sm-block-->
+    <nav class="up ">
+        <div class="container">
+            <div class="registration-login">
+                <div>
+                    <span>Registrácia</span>
+                </div>
+                <div>
+                    <span>Prihlásenie</span>
+                </div>
+            </div>
+            <div class="search-bar">
+                <form class="form-inline">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                </form>
+            </div>
+            <ul class="row">
+                <li class="col-12 col-sm-3"><a href="#">Domov</a></li>
+                <li class="col-12 col-sm-3"><a href="#">Kategórie<i class="large material-icons arrow-down">arrow_drop_down</i></a></li>
+                <ul class="category-menu">
+                    <li><a href="#">Mydlá</a></li>
+                    <li><a href="#">Krémy</a></li>
+                    <li><a href="#">Šampóny</a></li>
+                </ul>
+                <li class="col-12 col-sm-3"><a href="#">Blog</a></li>
+                <li class="col-12 col-sm-3"><a href="#">Kontakt</a></li>
+                <!--<li class="col"><a href="#">Obchodné podmienky</a></li>-->
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="img-category">
+            <img src="soap-2228609_1920.jpg" class="img-fluid" alt="Obrazok vybranej kategorie">
+        </div>
+        <div class="filter-mobile">
+            <div class="dropdown">
+                <button class="btn btn-block btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Filter
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <section class="filter">
+                        <section class="price">
+                            <h2>Cena</h2>
+                        </section>
+                        <section class="smell">
+                            <h2>Vône</h2>
+                            <ul>
+                                <li><input type="checkbox" aria-label="Checkbox for following text input"><span>Levanduľová</span></li>
+                                <li><input type="checkbox" aria-label="Checkbox for following text input"><span>Mangová</span></li>
+                                <li><input type="checkbox" aria-label="Checkbox for following text input"></li>
+                            </ul>
+                        </section>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <section class="shop">
+            <section class="filter">
+                <h1>Filter</h1>
+                <section class="categories">
+                    <h2>Kategórie</h2>
+                    <nav>
+                        <ul>
+                            <li>Všetko</li>
+                            <li>Mydlá</li>
+                            <li>Šampóny</li>
+                            <li>Krémy</li>
+                        </ul>
+                    </nav>
+                </section>
+                <section class="price">
+                    <h2>Cena</h2>
+                </section>
+                <section class="smell">
+                    <h2>Vône</h2>
+                    <ul>
+                        <li><input type="checkbox" aria-label="Checkbox for following text input"><span>Levanduľová</span></li>
+                        <li><input type="checkbox" aria-label="Checkbox for following text input"><span>Mangová</span></li>
+                        <li><input type="checkbox" aria-label="Checkbox for following text input"></li>
+                    </ul>
+                </section>
+            </section>
+            <section class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-md-4"></div>
+                    <div class="col-xs-12 col-md-4"></div>
+                    <div class="col-xs-12 col-md-4 order-by">
+                        <div class="dropdown">
+                            <button class="btn btn-block btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Zoradiť podľa
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Ceny</a>
+                                <a class="dropdown-item" href="#">Abecedy</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <a href="#">
+                            <div class="product">
+                                <div>
+                                    <img src="shampoo-827141_1920.jpg" alt="produkt">
+                                </div>
+                                <div class="product-description">
+                                    <div class="product-title"></div>
+                                    <p>Nazov produktu bude tu asi, mozno aj dlhsi nazov</p>
+                                    <div class="product-price">
+                                        <span>9.99eur</span>
+                                    </div>
+                                    <span>Vyber produkt</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <a href="#">
+                        <div class="product">
+                            <div>
+                                <img src="shampoo-827141_1920.jpg" alt="produkt">
+                            </div>
+                            <div class="product-description">
+                                <div class="product-title"></div>
+                                <p>Nazov produktu bude tu asi, mozno aj dlhsi nazov</p>
+                                <div class="product-price">
+                                    <span>9.99eur</span>
+                                </div>
+                                <span>Vyber produkt</span>
+                            </div>
+                        </div>
+                        </a>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <a href="#">
+                            <div class="product">
+                                <div>
+                                    <img src="shampoo-827141_1920.jpg" alt="produkt">
+                                </div>
+                                <div class="product-description">
+                                    <div class="product-title"></div>
+                                    <p>Nazov produktu bude tu asi, mozno aj dlhsi nazov</p>
+                                    <div class="product-price">
+                                        <span>9.99eur</span>
+                                    </div>
+                                    <span>Vyber produkt</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <a href="#">
+                            <div class="product">
+                                <div>
+                                    <img src="shampoo-827141_1920.jpg" alt="produkt">
+                                </div>
+                                <div class="product-description">
+                                    <div class="product-title"></div>
+                                    <p>Nazov produktu bude tu asi, mozno aj dlhsi nazov</p>
+                                    <div class="product-price">
+                                        <span>9.99eur</span>
+                                    </div>
+                                    <span>Vyber produkt</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <a href="#">
+                            <div class="product">
+                                <div>
+                                    <img src="shampoo-827141_1920.jpg" alt="produkt">
+                                </div>
+                                <div class="product-description">
+                                    <div class="product-title"></div>
+                                    <p>Nazov produktu bude tu asi, mozno aj dlhsi nazov</p>
+                                    <div class="product-price">
+                                        <span>9.99eur</span>
+                                    </div>
+                                    <span>Vyber produkt</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <a href="#">
+                            <div class="product">
+                                <div>
+                                    <img src="shampoo-827141_1920.jpg" alt="produkt">
+                                </div>
+                                <div class="product-description">
+                                    <div class="product-title"></div>
+                                    <p>Nazov produktu bude tu asi, mozno aj dlhsi nazov</p>
+                                    <div class="product-price">
+                                        <span>9.99eur</span>
+                                    </div>
+                                    <span>Vyber produkt</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <!--</div>-->
+
+    </main>
+
+
+
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <section class="col-6 col-md-3 col-sm-6">
+                    <h2>Navigácia</h2>
+                    <nav>
+                        <ul>
+                            <li>Domov</li>
+                            <li>Kategórie</li>
+                            <li>Blog</li>
+                            <li>Kontakt</li>
+                            <li>Obchodné podmienky</li>
+                        </ul>
+                    </nav>
+                </section>
+                <section class="col-6 col-md-3 col-sm-6">
+                    <h2>Kategórie</h2>
+                    <ul>
+                        <li>Mydlá</li>
+                        <li>Šampóny</li>
+                        <li>Krémy</li>
+                    </ul>
+                </section>
+                <section class="col-6 col-md-3 col-sm-6">
+                    <h2>Účet</h2>
+                    <ul>
+                        <li>Môj profil</li>
+                        <li>Moje objednávky</li>
+                        <li>Nastavenie</li>
+                    </ul>
+                </section>
+                <section class="col-6 col-md-3 col-sm-6">
+                    <h2>Kontakt</h2>
+                    <div>
+                        <span class="saumy">saUmy.sk</span><br>
+                        <span class="address">Vavrisovo 325</span>
+                        <img src="SaUmypatt.svg" alt="logo znacky saumy">
+                    </div>
+
+                </section>
+            </div>
+        </div>
+    </footer>
+    <div class="overlay"></div>
+</body>
+</html>

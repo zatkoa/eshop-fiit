@@ -1,0 +1,95 @@
+
+.detail-image {
+    grid-area: image;
+}
+
+.detail-image img {
+    width:100%;
+}
+.detail-main-info {
+    grid-area: main-info;
+}
+
+.detail-main-info h1{
+    font-size: 26px;
+}
+
+.detail-main-info .price{
+    font-size: 28px;
+}
+
+.detail-description {
+    grid-area: description;
+}
+
+.detail-description ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+
+.detail-description ul li {
+    width: calc(100% / 3);
+}
+
+.detail-description ul li a {
+    border: none;
+    border-bottom: 1px solid grey;
+    background-color: #fdf3ef;
+}
+
+.detail-description .tab-content p {
+    padding: 10px;
+}
+
+.detail-description .list-group-item.active {
+    border-bottom: 2px solid grey;
+    background-color: #F5C0AB;
+    color: inherit;
+}
+
+/*odporúčané položky*/
+
+section.recommended-products {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.recommended-products img {
+    width: 100%;
+}
+
+/* struktura*/
+.wrapper {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 2fr 2fr;
+    grid-template-areas:
+            "image main-info"
+            "image main-info"
+            "image main-info"
+            "image description"
+            "image description"
+            "image description";
+
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+@media (max-width: 767.98px) {
+    .wrapper {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: 2fr 2fr;
+        grid-template-areas:
+                "image image"
+                "image image"
+                "image image"
+                "main-info main-info"
+                "main-info main-info"
+                "description description"
+                "description description";
+
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+}

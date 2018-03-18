@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="index.css" rel="stylesheet">
+    <link href="menu.css" rel="stylesheet">
+    <link href="order-second.css" rel="stylesheet">
+    <link href="order-scelet.css" rel="stylesheet">
+    <link href="footer.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <!-- Materialize icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+    <script>
+        $(document).ready(function() {
+            $('i.menu').click(function() { //zmenit na pridanie classy
+                $('nav.up').css('width', '80%');
+                $('div.overlay').css('visibility', 'visible');
+                $('div.overlay').css('opacity', '1');
+            });
+
+            $('div.overlay').click(function(){ //zmenit na odstranenie clasy?
+                $('nav.up').css('width', '0px');
+                $(this).css('visibility', 'hidden');
+                $(this).css('opacity', '0');
+            });
+
+            $('#payment1').change(function(){
+                var display = 'none';
+                if ($(this).is(":checked") == true)
+                    display = 'block';
+               $('.fast-registration').each(function(){
+                   $(this).css('display',display);
+               });
+            });
+
+            $('#payment2').change(function(){
+                var display = 'none';
+                if ($(this).is(":checked") == true)
+                    display = 'block';
+                $('.another-address').each(function(){
+                    $(this).css('display',display);
+                });
+            });
+        });
+
+    </script>
+
+</head>
+<body>
+<header class="up">
+    <i class="large material-icons menu">menu</i>
+    <img src="logo_pattern.svg" alt="logo znacky saumy">
+    <div class="menu-title">
+        <span class="first">mydlá.</span>
+        <span class="second">saUmy.sk</span>
+        <span class="third ">krémy.</span>
+    </div>
+    <div class="icons">
+        <i class="large material-icons search">search</i>
+        <i class="large material-icons person">person</i>
+        <i class="large material-icons shop">shopping_cart</i>
+        <div>
+            <span>(1)</span>
+        </div>
+    </div>
+</header>
+<nav class="up ">
+    <div class="container">
+        <div class="registration-login">
+            <div>
+                <span>Registrácia</span>
+            </div>
+            <div>
+                <span>Prihlásenie</span>
+            </div>
+        </div>
+        <div class="search-bar">
+            <form class="form-inline">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            </form>
+        </div>
+        <ul class="row">
+            <li class="col-12 col-sm-3"><a href="#">Domov</a></li>
+            <li class="col-12 col-sm-3"><a href="#">Kategórie<i class="large material-icons arrow-down">arrow_drop_down</i></a></li>
+            <ul class="category-menu">
+                <li><a href="#">Mydlá</a></li>
+                <li><a href="#">Krémy</a></li>
+                <li><a href="#">Šampóny</a></li>
+            </ul>
+            <li class="col-12 col-sm-3"><a href="#">Blog</a></li>
+            <li class="col-12 col-sm-3"><a href="#">Kontakt</a></li>
+            <!--<li class="col"><a href="#">Obchodné podmienky</a></li>-->
+        </ul>
+    </div>
+</nav>
+
+<main>
+    <section class="container order-second-step">
+        <form>
+
+            <h1>Dodacie údaje</h1>
+            <hr>
+
+            <section class="row">
+                <section class="col-sm-12 col-md-6">
+                    <label for="inputFirstName">Meno*</label>
+                    <input type="text" id="inputFirstName" class="form-control" placeholder="Meno">
+                </section>
+                <section class="col-sm-12 col-md-6">
+                    <label for="inputLastName">Priezvisko*</label>
+                    <input type="text" id="inputLastName" class="form-control" placeholder="Priezvisko">
+                </section>
+                <section class="col-sm-12 col-md-6">
+                    <label for="inputTelNumber">Telefónne číslo</label>
+                    <input type="tel" id="inputTelNumber" class="form-control" placeholder="Telefónne číslo">
+                </section>
+                <section class="col-sm-12 col-md-6">
+                    <label for="inputEmail">Emailová adresa*</label>
+                    <input type="email" id="inputEmail" class="form-control" placeholder="Emailová adresa">
+                </section>
+            </section>
+
+            <section class="row">
+                <section class="col-sm-12 col-md-6">
+                    <label for="inputCity">Mesto*</label>
+                    <input type="text" id="inputCity" class="form-control" placeholder="Mesto">
+                </section>
+                <section class="col-sm-12 col-md-6">
+                    <label for="inputZip">PSČ*</label>
+                    <input type="number" id="inputZip" class="form-control" placeholder="PSČ">
+                </section>
+                <section class="col-sm-12 col-md-6">
+                    <label for="inputStreet">Ulica*</label>
+                    <input type="text" id="inputStreet" class="form-control" placeholder="Ulica">
+                </section>
+                <section class="col-sm-12 col-md-6">
+                    <label for="inputStreetNumber">Číslo*</label>
+                    <input type="number" id="inputStreetNumber" class="form-control" placeholder="Číslo">
+                </section>
+                <section class="col-sm-12 col-md-6">
+                    <label for="inputState">Krajina*</label>
+                    <select id="inputState" class="form-control">
+                        <option selected>Slovensko</option>
+                        <option>Česko</option>
+                        <option>Nemecko</option>
+                    </select>
+                </section>
+                <section class="col-sm-12 col-md-6">
+                    Povinné údaje sú označené hviezdičkou*
+                </section>
+            </section>
+            <section class="row radio-buttons">
+
+                    <div class="custom-control custom-checkbox col-8 checkbox ">
+                        <input class="custom-control-input" type="checkbox" value="" id="payment1">
+                        <label class="custom-control-label" for="payment1">
+                            Založiť konto
+                        </label>
+                    </div>
+
+                    <div class="col-sm-12 col-md-6 fast-registration">
+                        <label for="inputPassword">Heslo</label>
+                        <input type="password" class="form-control" id="inputPassword" placeholder="Heslo">
+                    </div>
+                    <div class="col-sm-12 col-md-6 fast-registration">
+                        <label for="inputPasswordAgain">Potvrdenie hesla</label>
+                        <input type="password" class="form-control" id="inputPasswordAgain" placeholder="Potvrdenie hesla">
+                    </div>
+
+                    <div class="custom-control custom-checkbox col-8 checkbox ">
+                        <input class="custom-control-input" type="checkbox" value="" id="payment2">
+                        <label class="custom-control-label" for="payment2">
+                                Zaslať na inú adresu
+                        </label>
+                    </div>
+
+                    <section class="col-sm-12 col-md-6 another-address">
+                        <label for="inputAnotherCity">Mesto*</label>
+                        <input type="text" id="inputAnotherCity" class="form-control" placeholder="Mesto">
+                    </section>
+                    <section class="col-sm-12 col-md-6 another-address">
+                        <label for="inputAnotherZip">PSČ*</label>
+                        <input type="number" id="inputAnotherZip" class="form-control" placeholder="PSČ">
+                    </section>
+                    <section class="col-sm-12 col-md-6 another-address">
+                        <label for="anotherStreet">Ulica*</label>
+                        <input type="text" id="anotherStreet" class="form-control" placeholder="Ulica">
+                    </section>
+                    <section class="col-sm-12 col-md-6 another-address">
+                        <label for="inputAnotherStreetNumber">Číslo*</label>
+                        <input type="number" id="inputAnotherStreetNumber" class="form-control" placeholder="Číslo">
+                    </section>
+                    <section class="col-sm-12 col-md-6 another-address">
+                        <label for="inputAnotherState">Krajina*</label>
+                        <select id="inputAnotherState" class="form-control">
+                            <option selected>Slovensko</option>
+                            <option>Česko</option>
+                            <option>Nemecko</option>
+                        </select>
+                    </section>
+
+
+                    <div class="custom-control custom-checkbox col-8 checkbox ">
+                        <input class="custom-control-input" type="checkbox" value="" id="payment3">
+                        <label class="custom-control-label" for="payment3">
+                            Súhlasím s obchodnými podmienkami a s podmienkami o ochrane súkromia*
+                        </label>
+                    </div>
+                    <!--<div class="custom-control custom-radio col-8">-->
+                        <!--<input type="radio" id="payment2" name="payment" class="custom-control-input">-->
+                        <!--<label class="custom-control-label" for="payment2">Zaslať na inú adresu</label>-->
+                    <!--</div>-->
+                    <!--<div class="custom-control custom-radio col-8">-->
+                        <!--<input type="radio" id="payment3" name="payment" class="custom-control-input">-->
+                        <!--<label class="custom-control-label" for="payment3">Súhlasím s obchodnými podmienkami a s podmienkami o ochrane súkromia*</label>-->
+                    <!--</div>-->
+            </section>
+
+
+
+
+
+
+            <section class="row next-step">
+                <div class="col-md-6 order-sm-2 order-2 order-md-1">
+                    <a class="back" href="#" role="button">Späť do košíka</a>
+                </div>
+                <div class="col-md-6 order-sm-1 order-1 order-md-2 d-flex flex-center">
+                    <a class="btn btn-lg btn-secondary float-right next" href="#" role="button">Pokračovať</a>
+                </div>
+            </section>
+        </form>
+    </section>
+</main>
+<footer>
+    <div class="container-fluid">
+        <div class="row">
+            <section class="col-6 col-md-3 col-sm-6">
+                <h2>Navigácia</h2>
+                <nav>
+                    <ul>
+                        <li>Domov</li>
+                        <li>Kategórie</li>
+                        <li>Blog</li>
+                        <li>Kontakt</li>
+                        <li>Obchodné podmienky</li>
+                    </ul>
+                </nav>
+            </section>
+            <section class="col-6 col-md-3 col-sm-6">
+                <h2>Kategórie</h2>
+                <ul>
+                    <li>Mydlá</li>
+                    <li>Šampóny</li>
+                    <li>Krémy</li>
+                </ul>
+            </section>
+            <section class="col-6 col-md-3 col-sm-6">
+                <h2>Účet</h2>
+                <ul>
+                    <li>Môj profil</li>
+                    <li>Moje objednávky</li>
+                    <li>Nastavenie</li>
+                </ul>
+            </section>
+            <section class="col-6 col-md-3 col-sm-6">
+                <h2>Kontakt</h2>
+                <div>
+                    <span class="saumy">saUmy.sk</span><br>
+                    <span class="address">Vavrisovo 325</span>
+                    <img src="SaUmypatt.svg" alt="logo znacky saumy">
+                </div>
+
+            </section>
+        </div>
+    </div>
+</footer>
+<div class="overlay"></div>
+</body>
+</html>

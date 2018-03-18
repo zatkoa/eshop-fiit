@@ -1,0 +1,43 @@
+
+/* vysledna cena s dopravou*/
+
+.titles .title-delivery {
+    display: block;
+}
+
+.prices .price-delivery {
+    display: block;
+}
+
+.summary {
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+.summary span {
+    padding-left: 20px;
+}
+
+.summary .titles .title-delivery, .summary .prices .price-delivery {
+    padding-bottom: 10px;
+}
+.summary .titles .title-total, .summary .prices .price-total {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+@media (max-width: 575.98px) {
+    .summary {
+        text-align: center;
+    }
+
+    .summary .titles .title-total, .summary .prices .price-total {
+
+        font-size: 20px;
+    }
+    .summary span {
+        padding-left: 0px;
+    }
+}
+
+

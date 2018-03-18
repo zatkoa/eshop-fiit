@@ -1,0 +1,39 @@
+/*kostra pre vsetky kroky v objednavke*/
+
+.order-first-step, .order-second-step {
+    padding-top: 40px;
+    padding-bottom: 50px;
+    font-size: 13px;
+}
+
+
+.order-first-step form, .order-second-step form {
+    border: 1px solid grey;
+    padding: 45px 15px 0 15px;
+    font-weight: 600;
+}
+
+
+.order-first-step h1, .order-second-step h1 {
+    font-size: 21px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.order-first-step hr, .order-second-step hr {
+    margin-right: 30px;
+    margin-left: 30px;
+}
+
+
+.radio-buttons .custom-radio {
+    margin: 25px 50px;
+}
+
+
+
+/* radio button - prekonanie bootstrapu*/
+
+.custom-radio .custom-control-input:checked~.custom-control-label::before {
+    background: #373a48 none repeat scroll 0 0;
+}

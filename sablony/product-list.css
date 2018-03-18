@@ -1,0 +1,129 @@
+/* OBRAZOK KATEGORIE*/
+
+div.img-category {
+    width: 100%;
+    overflow: hidden;
+    height: 600px;
+}
+
+div.img-category img {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*FILTER*/
+main section.filter {
+    width: 20%;
+    max-width: 300px;
+    background: grey;
+    padding: 40px;
+}
+
+.shop .filter ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.smell span {
+    padding-left:15px;
+}
+
+.filter section {
+    margin-bottom: 15px;
+}
+
+.filter-mobile {
+    width: 100%;
+    display: none;
+}
+
+.filter-mobile .smell ul li:nth-child(odd) {
+    float: left;
+}
+
+
+@media (max-width: 1199.98px) {
+    .filter h1 {
+        font-size: 30px;
+        font-weight: bold;
+    }
+    .filter h2 {
+        font-size: 22px;
+    }
+    .filter nav, .smell span {
+        font-size: 14px;
+    }
+    main section.filter {
+        width: 24%;
+    }
+}
+
+@media (max-width: 991.98px) {
+    main section.filter {
+        width: 28%;
+    }
+}
+
+
+@media (max-width: 767.98px) {
+    section.category-images {
+        font-size: 25px;
+    }
+    section.category-images p{
+        font-size: 20px;
+    }
+    .filter-mobile {
+        display: block;
+    }
+    .order-by,   .filter-mobile {
+        text-align: center;
+        font-size: 28px;
+    }
+    main section.filter {
+        display:none;
+    }
+}
+
+/*ZORADENIE PODLA*/
+
+
+/*PRODUKTY*/
+.product {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-description {
+    text-align: center
+}
+
+.product img {
+    width: 100%;
+}
+
+.shop {
+    display:flex;
+}
+
+.shop .container {
+    margin: 30px auto;
+
+}
+
+.shop .container .row > div {
+    margin-bottom: 20px;
+}
+
+.shop . container .row {
+    margin: 0 15px;
+}
+
+@media (max-width: 767.98px) {
+    .shop {
+        display: block;
+    }
+}
+

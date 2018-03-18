@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="index.css" rel="stylesheet">
+    <link href="menu.css" rel="stylesheet">
+    <link href="shopping_cart.css" rel="stylesheet">
+    <link href="footer.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Materialize icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+    <script>
+        $(document).ready(function() {
+            $('i.menu').click(function() { //zmenit na pridanie classy
+                $('nav.up').css('width', '80%');
+                $('div.overlay').css('visibility', 'visible');
+                $('div.overlay').css('opacity', '1');
+            });
+
+            $('div.overlay').click(function(){ //zmenit na odstranenie clasy?
+                $('nav.up').css('width', '0px');
+                $(this).css('visibility', 'hidden');
+                $(this).css('opacity', '0');
+            });
+
+        });
+
+    </script>
+
+</head>
+<body>
+    <header class="up">
+        <i class="large material-icons menu">menu</i>
+        <img src="logo_pattern.svg" alt="logo znacky saumy">
+        <div class="menu-title">
+            <span class="first">mydlá.</span>
+            <span class="second">saUmy.sk</span>
+            <span class="third ">krémy.</span>
+        </div>
+        <div class="icons">
+            <i class="large material-icons search">search</i>
+            <i class="large material-icons person">person</i>
+            <i class="large material-icons shop">shopping_cart</i>
+            <div>
+                <span>(1)</span>
+            </div>
+        </div>
+    </header>
+    <!--d-none d-sm-block-->
+    <nav class="up ">
+        <div class="container">
+            <div class="registration-login">
+                <div>
+                    <span>Registrácia</span>
+                </div>
+                <div>
+                    <span>Prihlásenie</span>
+                </div>
+            </div>
+            <div class="search-bar">
+                <form class="form-inline">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                </form>
+            </div>
+            <ul class="row">
+                <li class="col-12 col-sm-3"><a href="#">Domov</a></li>
+                <li class="col-12 col-sm-3"><a href="#">Kategórie<i class="large material-icons arrow-down">arrow_drop_down</i></a></li>
+                <ul class="category-menu">
+                    <li><a href="#">Mydlá</a></li>
+                    <li><a href="#">Krémy</a></li>
+                    <li><a href="#">Šampóny</a></li>
+                </ul>
+                <li class="col-12 col-sm-3"><a href="#">Blog</a></li>
+                <li class="col-12 col-sm-3"><a href="#">Kontakt</a></li>
+                <!--<li class="col"><a href="#">Obchodné podmienky</a></li>-->
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <div class="container shopping-cart-step-1">
+            <h1>Nákupný košík</h1>
+            <section class="shopping-cart">
+                <header class="row d-none d-md-flex">
+                    <div class="col-6"></div>
+                    <div class="col-2">Cena</div>
+                    <div class="col-2">Množstvo</div>
+                    <div class="col-2">Odstrániť</div>
+                </header>
+                <hr>
+                <div class="row product">
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-6 order-sm-1 "><img src="shampoo-827141_1920.jpg" alt="shampón v košíku"></div>
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-4 order-sm-2"><div>Názov produktu, ktorý je dlhší</div></div>
+                    <div class="col-lg-2 col-md-2 col-sm-6 col-6 order-4 order-sm-4 order-md-3"><div>29.99 eur</div></div>
+                    <div class="col-lg-2 col-md-2 col-sm-6 col-6 order-5 order-sm-5 order-md-4"><div class="quantity"><i class="fa fa-minus-circle"></i>5<i class="fa fa-plus-circle"></i></div></div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-2 order-3 order-sm-3 order-md-5"><div><i class="large material-icons close">close</i></div></div>
+                </div>
+                <div class="row product">
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-6 order-sm-1 "><img src="shampoo-827141_1920.jpg" alt="shampón v košíku"></div>
+                    <div class="col-lg-3 col-md-3 col-sm-4 col-4 order-sm-2"><div>Názov produktu, ktorý je dlhší</div></div>
+                    <div class="col-lg-2 col-md-2 col-sm-6 col-6 order-4 order-sm-4 order-md-3"><div>29.99 eur</div></div>
+                    <div class="col-lg-2 col-md-2 col-sm-6 col-6 order-5 order-sm-5 order-md-4"><div class="quantity"><i class="fa fa-minus-circle"></i>5<i class="fa fa-plus-circle"></i></div></div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-2 order-3 order-sm-3 order-md-5"><div><i class="large material-icons close">close</i></div></div>
+                </div>
+                <hr>
+                <div class="row total">
+                    <div class="col-6 label">Suma spolu:</div>
+                    <div class="col-6 price-total">156.89 eur</div>
+                </div>
+            </section>
+            <section class="row next-step">
+                <div class="col-md-6 order-sm-2 order-2 order-md-1">
+                    <a class="back" href="#" role="button">Pokračovať v nákupe</a>
+                </div>
+                <div class="col-md-6 order-sm-1 order-1 order-md-2 d-flex flex-center">
+                    <a class="btn btn-lg btn-secondary float-right next" href="#" role="button">Prejsť na objednanie</a>
+                </div>
+            </section>
+        </div>
+
+
+    </main>
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <section class="col-6 col-md-3 col-sm-6">
+                    <h2>Navigácia</h2>
+                    <nav>
+                        <ul>
+                            <li>Domov</li>
+                            <li>Kategórie</li>
+                            <li>Blog</li>
+                            <li>Kontakt</li>
+                            <li>Obchodné podmienky</li>
+                        </ul>
+                    </nav>
+                </section>
+                <section class="col-6 col-md-3 col-sm-6">
+                    <h2>Kategórie</h2>
+                    <ul>
+                        <li>Mydlá</li>
+                        <li>Šampóny</li>
+                        <li>Krémy</li>
+                    </ul>
+                </section>
+                <section class="col-6 col-md-3 col-sm-6">
+                    <h2>Účet</h2>
+                    <ul>
+                        <li>Môj profil</li>
+                        <li>Moje objednávky</li>
+                        <li>Nastavenie</li>
+                    </ul>
+                </section>
+                <section class="col-6 col-md-3 col-sm-6">
+                    <h2>Kontakt</h2>
+                    <div>
+                        <span class="saumy">saUmy.sk</span><br>
+                        <span class="address">Vavrisovo 325</span>
+                        <img src="SaUmypatt.svg" alt="logo znacky saumy">
+                    </div>
+
+                </section>
+            </div>
+        </div>
+    </footer>
+<div class="overlay"></div>
+</body>
+</html>
