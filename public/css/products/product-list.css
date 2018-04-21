@@ -1,0 +1,217 @@
+main {
+    background: floralwhite;
+}
+
+/* OBRAZOK KATEGORIE*/
+
+div.img-category {
+    width: 100%;
+    overflow: hidden;
+    height: 600px;
+}
+
+div.img-category img {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*FILTER*/
+main section.filter {
+    width: 20%;
+    max-width: 300px;
+    background: #DFE2DB;
+    padding: 40px;
+
+    -webkit-box-shadow: 1px -2px 14px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px -2px 14px 0px rgba(0,0,0,0.75);
+    box-shadow: 1px -2px 14px 0px rgba(0,0,0,0.75);
+
+}
+.filter nav, .filter h1, .filter h2 {
+    padding-bottom: 15px;
+}
+
+.shop .filter ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.smell span {
+    padding-left:15px;
+}
+
+.filter section {
+    margin-bottom: 15px;
+}
+
+.filter-mobile {
+    width: 100%;
+    display: none;
+}
+
+.filter-mobile .smell ul li:nth-child(odd) {
+    float: left;
+}
+
+
+.drop-down-filter {
+    width: 100%;
+    background: #DFE2DB;
+    padding: 15px;
+}
+
+.drop-down-filter h2 {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.drop-down-filter ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.filter-mobile .dropdown-menu {
+    float: none;
+    position: relative;
+}
+
+@media (max-width: 1199.98px) {
+    .filter h1 {
+        font-size: 30px;
+        font-weight: bold;
+    }
+    .filter h2 {
+        font-size: 22px;
+    }
+    .filter nav, .smell span {
+        font-size: 14px;
+    }
+    main section.filter {
+        width: 24%;
+    }
+}
+
+@media (max-width: 991.98px) {
+    main section.filter {
+        width: 28%;
+    }
+}
+
+@media (max-width: 767.98px) {
+    section.category-images {
+        font-size: 25px;
+    }
+    section.category-images p{
+        font-size: 20px;
+    }
+    .filter-mobile {
+        display: block;
+    }
+    .order-by,   .filter-mobile {
+        text-align: center;
+        font-size: 28px;
+    }
+    main section.filter {
+        display:none;
+    }
+}
+
+/*prekonanie bootstrap checkbox */
+
+.checkbox.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    background-color: #373a48;
+
+}
+
+.checkbox .custom-control-label::before {
+    border: solid 1px #373a48;
+}
+
+
+/*ZORADENIE PODLA*/
+
+
+/*PRODUKTY*/
+.product {
+    display: flex;
+    flex-direction: column;
+    transition: transform .2s;
+}
+
+.product a:hover {
+    text-decoration: none;
+}
+
+.product:hover {
+    transform: scale(1.05);
+}
+
+.product-description {
+    text-align: center;
+    /*background: peachpuff;*/
+    font-weight: 600;
+}
+
+.product-description p {
+    font-size: 14px;
+    margin-bottom: 5px;
+    padding-top: 10px;
+}
+
+.product-price {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.product img {
+    width: 100%;
+    transform: scale(0.8);
+}
+
+.shop {
+    display:flex;
+}
+
+.shop .container {
+    margin: 30px auto 0 auto;
+    padding-bottom: 30px;
+
+}
+
+.shop .container .row > div {
+    margin-bottom: 20px;
+}
+
+.shop .container .row {
+    margin: 0 15px;
+}
+
+.shop a {
+    color: black;
+}
+
+@media (max-width: 991.98px) {
+    div.img-category {
+        height: 515px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .shop {
+        display: block;
+    }
+    div.img-category {
+        height: 380px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    div.img-category {
+        height: 200px;
+    }
+}
+

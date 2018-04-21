@@ -1,0 +1,114 @@
+.detail-image img {
+    width:100%;
+    transform: scale(0.85);
+}
+
+.detail-main-info h1{
+    font-size: 26px;
+}
+
+.detail-main-info .price{
+    font-size: 34px;
+    margin: 16px;
+    font-weight: bold;
+}
+
+.detail-description {
+    margin-top: 30px;
+}
+
+.detail-description ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    font-weight: 600;
+}
+
+.detail-description ul li {
+    width: calc(100% / 3);
+}
+
+.detail-description ul li a {
+    border: none;
+    border-bottom: 1px solid grey;
+    background-color: #fdf3ef;
+}
+
+.detail-description .tab-content p {
+    padding: 10px;
+}
+
+.detail-description .list-group-item.active {
+    border-bottom: 2px solid grey;
+    background-color: #DFE2DB;
+    color: inherit;
+}
+
+.add-to-chart {
+    cursor: pointer;
+    /*background: #eb967d;*/
+    opacity: 0.9;
+    background: #373a48;
+    height: 50px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    width: 70%;
+    min-width: 250px;
+    color: white;
+    font-size: 21px;
+    font-weight: 600;
+    text-align:center;
+}
+
+.add-to-chart span {
+    vertical-align: middle;
+}
+
+a.add-to-chart:hover {
+    opacity: 0.8;
+    text-decoration: none;
+}
+
+.detail-main-info a {
+    font-weight: 600;
+    color: white;
+    width: 66%;
+    padding: 0;
+    border: 1px solid black;
+    font-size: 22px;
+}
+
+.detail-main-info a:hover {
+    opacity : 0.7;
+}
+
+@media (max-width: 767.98px) {
+    .detail-main-info {
+        align-items: center;
+    }
+    h1 {
+        text-align:center;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .detail-description {
+        padding: 0;
+    }
+    .detail-description ul {
+        font-size: 12px;
+        white-space: nowrap;
+    }
+    .add-to-chart {
+        font-size: 20px;
+        line-height: 1.9;
+    }
+}
+
+/* struktura*/
+
+main section.container.detail-whole {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+

@@ -1,0 +1,23 @@
+h1 {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.product {
+    margin-bottom: 20px;
+}
+
+.search-results a {
+    color: black;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.product-description p {
+    padding: 4px 4px 0px 4px;
+}
+
+.search-results {
+    padding-bottom: 30px;
+}

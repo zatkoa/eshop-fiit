@@ -1,0 +1,31 @@
+
+form {
+    padding-top: 20px;
+}
+
+.add-product {
+    margin-top: 60px;
+}
+
+.button-nav > div {
+    margin: 10px;
+}
+
+.button-nav a {
+    background: rgb(221,221,221);
+    color:black;
+}
+
+.button-nav a:hover {
+    color:black;
+    background: rgb(200,200,200);
+}
+
+button[type=submit] {
+    background: #7bbc00;
+    color: white;
+}
+
+button[type=submit]:hover {
+    background: #6aa300;
+}

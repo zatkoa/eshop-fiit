@@ -1,0 +1,34 @@
+body main .login-reg-page{
+    background: white;
+}
+
+body main .login-reg-page h1{
+    text-align: center;
+    margin-top: 45px;
+    margin-bottom: 45px;
+}
+
+form.login-reg-form {
+    margin: 25px 25px 70px 25px;
+}
+
+form.login-reg-form a {
+    background: rgb(221, 221, 221);
+    color: black;
+}
+
+form.login-reg-form .form-group {
+    margin-bottom: 35px
+}
+
+form.login-reg-form button, form.login-reg-form .login-registration-label {
+    margin-bottom: 10px;
+}
+
+form.login-reg-form section{
+    padding-bottom: 30px;
+}
+
+form.login-reg-form section > div {
+    padding-bottom: 15px;
+}

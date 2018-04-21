@@ -1,0 +1,63 @@
+body .container-fluid {
+    width: 500px;
+    position:absolute;
+    left:50%;
+    margin-left: calc(-500px/2);
+    margin-top: 15%;
+}
+
+body .container-fluid > div {
+    padding: 50px;
+    padding-top: 10px;
+    background-color: #373a48;
+    border-radius: 5px;
+}
+
+
+header {
+    color: white;
+    padding-bottom: 30px;
+    font-size: 21px;
+}
+
+header h1 {
+    font-size: 22px;
+}
+
+header div:nth-of-type(2) {
+    text-align: right;
+}
+header > div {
+    width: 49%;
+    display: inline-block;
+}
+
+form label {
+    color: white;
+}
+
+.btn {
+    margin-top: 26px;
+}
+
+@media (max-width: 575.98px) {
+    body .container-fluid {
+        width: 100%;
+        margin-left: calc(-100%/2);
+    }
+
+    header {
+        font-size: 18px;
+    }
+
+    header h1 {
+        font-size: 20px;
+    }
+
+    header > div:nth-of-type(1) {
+        width: 70%
+    }
+    header > div:nth-of-type(2) {
+        width: 28%
+    }
+}

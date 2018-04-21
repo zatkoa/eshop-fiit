@@ -1,0 +1,458 @@
+/*HLAVICKA MENU*/
+
+header.up {
+    color: white;
+    background-color: #695d53;
+}
+
+header.up > div {
+    display:flex;
+    justify-content: center;
+}
+
+
+header.up span.first, header.up span.third {
+    min-height: 40px;
+    padding-top: 8px;
+}
+
+header.up span.second a {
+    color: white;
+}
+
+header.up span.second a:hover {
+    color:white;
+    text-decoration: none;
+}
+
+header.up span.second {
+    padding: 3px 21px 0px 21px;
+    font-weight: 600;
+}
+
+header.up span {
+    font-size: 20px;
+    line-height: 2;
+}
+
+header.up .login-name {
+    margin-right: 5px;
+    background: bisque;
+    position: relative;
+    height: 27px;
+    width: 27px;
+    border-radius: 100%;
+    color: black;
+}
+
+header.up .icons .login-name span {
+    left: 7px;
+    position: absolute;
+    bottom: -5px;
+    font-size: 18px;
+}
+
+header.up > div {
+    position: relative;
+}
+/*dropdown styly*/
+
+/* important kvoli tomu, lebo bootstrap vklada inline style*/
+header.up .dropdown-account {
+    top: 32px !important;
+    left: -77px !important;
+    transform: none !important;
+    font-size: 17px;
+    padding-top: 3px;
+}
+
+header.up .dropdown-account ul {
+    /*padding-left: 15px;*/
+}
+
+header.up .dropdown-account ul li {
+    padding-left: 15px;
+}
+
+header.up .dropdown-account ul li:hover {
+    background: #f2f2f2;
+}
+
+
+header.up .dropdown-account span {
+    padding-left: 5px;
+    font-weight: 600;
+}
+
+header.up .dropdown-account hr {
+    margin: 4px 0;
+}
+
+header.up .dropdown-account a {
+    color: black;
+}
+
+header.up .dropdown-account a {
+    text-decoration: none;
+}
+/*koniec dropdown stylov*/
+
+
+
+header.up span.second {
+    font-size: 39px;
+}
+
+header.up .menu-item {
+    position: relative;
+    padding-right: 7px;
+}
+
+@media (max-width: 991.98px) {
+    header.up span.second {
+        padding: 3px 10px 0px 10px;
+    }
+
+    header.up .menu-item-title {
+        display: none;
+    }
+}
+
+@media (max-width: 767.98px) {
+    header.up span.second {
+        font-size: 30px;
+    }
+    header.up span.first, header span.third {
+        display: none;
+    }
+}
+
+@media (max-width: 575.98px) {
+    header.up > div {
+        justify-content: space-around;
+    }
+}
+
+/*NAVIGACIA MENU*/
+
+nav.up{
+    height: 37px;
+    background-color: #DFE2DB;
+    text-align: center
+}
+
+nav.up  a {
+    font-size: 17px;
+    line-height:2;
+    text-decoration:none;
+}
+nav.up ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color:black;
+}
+
+nav.up div.registration-login {
+    display: none;
+}
+
+nav.up div.search-bar {
+    display: none;
+}
+
+@media (max-width: 767.98px) {
+    nav.up .container {
+        padding:0;
+        margin:0;
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 576px) {
+
+    nav.up #categories ul.category-menu {
+        height: 0;
+        transition: 0.4s;
+        background: white;
+        z-index: 2;
+        position: absolute;
+        left: 0;
+        right: 0;
+        overflow: hidden;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    nav.up #categories:hover ul.category-menu {
+        height: 40px;
+    }
+    nav.up #categories {
+        position: inherit;
+    }
+}
+
+@media (max-width: 575.98px) {
+    nav.up {
+        width:0;
+        position: fixed;
+        height: 100%;
+        max-height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 100000;
+        overflow-x: hidden;
+        transition: 0.5s;
+        text-align: left;
+    }
+
+    nav.up ul.row {
+        padding-left: 25px;
+        padding-top: 20px;
+    }
+
+    nav.up div.registration-login {
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    nav.up div.registration-login div {
+        flex-grow: 1;
+    }
+
+    nav.up div.registration-login div:last-of-type {
+        text-align: right;
+    }
+
+    nav.up div.search-bar {
+        display: block;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    nav.up #categories ul.category-menu {
+        display: block;
+        padding-left: 45px;
+    }
+
+    nav.up.eject {
+        width: 80%;
+    }
+
+}
+
+/*MENU OVERLAY*/
+
+div.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    opacity: 0;
+    background: rgba(253,243,239,0.7);
+    transition: all 0.3s;
+    overflow:  hidden;
+}
+
+div.overlay.show-menu {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/* ICONS*/
+
+/*ICONS HEADER*/
+
+header.up div.menu-title {
+    padding-right: 30px;
+    text-align: center;
+}
+
+header.up i.menu {
+    display: none;
+    font-size: 30px;
+    padding-top: 30px;
+    padding-left: 10px;
+}
+
+header.up i.search {
+    float:left;
+    padding-right: 5px;
+}
+
+header.up i.person {
+    float:left;
+    padding-right: 5px;
+}
+
+header.up i.shop {
+    float:left;
+}
+
+i.shop, i.person, i.search {
+    font-size: 29px;
+    opacity: 0.9;
+}
+
+header.up div.icons {
+    padding-top: 35px;
+    margin-left: 3%;
+    letter-spacing: 1.5px;
+}
+
+
+header.up div.icons  div {
+    float:left;
+}
+
+header.up div.icons span {
+    font-size: 13px;
+}
+
+header.up img {
+    width: 36px;
+    height: 40px;
+    margin-bottom: 14px;
+    margin-right: 1px;
+}
+
+.icons a {
+    color:white;
+}
+
+.icons a:focus {
+    outline: none;
+}
+
+@media (max-width: 991.98px) {
+
+    header.up div.icons {
+        position: absolute;
+        top: -5px;
+    }
+
+    header.up div.menu-title {
+        padding-right: 0;
+    }
+
+    header.up i.search {
+        padding-right: 5px;
+    }
+
+    header.up i.person {
+        padding-right: 5px;
+    }
+
+    header.up div.icons {
+        right: 4%;
+    }
+}
+
+@media (max-width: 767.98px) {
+    header.up img {
+        width: 28px;
+        height: 30px;
+        margin-bottom: 10px;
+    }
+    header.up div.icons {
+        top: -15px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    header.up i.menu {
+        display: block;
+        position: absolute;
+        left: 17px;
+        top: -11px;
+    }
+
+    header.up i.person, header.up i.search, header.up .login-name{
+        display: none;
+    }
+
+}
+
+/*ICONS NAV*/
+nav i.arrow-down {
+    font-size: 25px;
+}
+
+@media (max-width: 991.98px) {
+    nav i.arrow-down {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    nav i.arrow-down {
+        font-size: 0px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    nav i.arrow-down {
+        font-size: 0px;
+    }
+}
+
+
+/* SEARCH BAR*/
+
+header.up .search-bar {
+    background: white;
+    height: 0px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.submit-search {
+    position: absolute;
+    right: 20px;
+    padding-top: 12px;
+    background: transparent;
+}
+
+.show-search-bar {
+    padding: 0;
+}
+
+.search-bar-menu {
+    display: flex;
+    justify-content: center;
+}
+
+header.up .search-bar-show {
+    height: 45px;
+}
+
+.search-bar-menu > form {
+    width: 45%;
+    padding: 7px;
+    position: relative;
+}
+
+.search-bar-menu form.form-inline > input {
+    width: 100%;
+}
+
+@media (max-width: 575.98px) {
+    .search-bar-menu {
+        height: 0;
+        overflow: hidden;
+    }
+}
